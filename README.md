@@ -9,8 +9,13 @@ Simply construct object and call run();
 
 `
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+`
+`
 <script type="text/javascript" src="instagramapi/instagramapi.js"></script>
+`
+`
 <script>
+`
 	var instaAPI = new InstaAPI({
 		target: 'insta_api1',
 		clientId: '',
@@ -23,6 +28,7 @@ Simply construct object and call run();
 		</script>
 </head>
 <body>
+`
 <div class="instagramFeed" id="insta_api1"></div>	
 `
 
