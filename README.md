@@ -16,16 +16,14 @@ Simply construct object and call run();
 		clientId: '',
 		userId: '',
 		accessToken: '',
-		resolution : 'low', //low / standard / thumbnail
+		resolution : 'low',
 		maxContentCount: 5
 	});
 	instaAPI.run();
 		</script>
 </head>
-
 <body>
 <div class="instagramFeed" id="insta_api1"></div>	
-
 `
 
 ## Back End side (Nodejs)
