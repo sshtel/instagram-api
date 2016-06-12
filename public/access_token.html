@@ -1,0 +1,44 @@
+<html>
+	<head>
+
+		<!-- jQuery -->
+		<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+		<script>
+
+			function requestAccessToken(clientId, redirectUri){
+				console.log(clientId);
+				console.log(redirectUri);
+
+				  var redirect_uri = "&redirect_uri=" + redirectUri,
+				      response_type = "&response_type=token",
+				      url = "https://api.instagram.com/oauth/authorize/?client_id=" + clientId + redirect_uri + response_type;
+					window.location.href = url;
+			}
+			$(document).ready(function(){
+				$(requestAccessTokenButton).bind('click', function(){
+					var clientId = document.getElementById('clientIdInput').value;
+					var redirectUri = document.getElementById('redirectUriInput').value;
+					requestAccessToken(clientId, redirectUri);
+				});
+			});
+		</script>
+
+	</head>
+	<body>
+		
+		<label>User ID</label><br>
+		<input id='clientIdInput' type='input' value = ''> <br><br>
+		<label >Redirect URI</label> <br>
+		<input id='redirectUriInput' type='input' value = ''> <br>
+		<br>
+		<input id='requestAccessTokenButton' type='button' value='request'>
+
+		<br>
+		
+
+
+	</body>
+
+
+</html>
